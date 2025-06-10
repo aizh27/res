@@ -13,14 +13,13 @@ import io
 load_dotenv()
 
 # Configure Gemini API
-
-genai.configure(api_key="AIzaSyD7fSCEABwq3JezjAVh8ujVGYlps_iuXi4")
+genai.configure(api_key="AIzaSyCmoqnAdEuXy9mstE4RNwIVxDraRgtlxpU")
 
 # --- Helper Functions ---
 def generate_resume_content(prompt_text):
     """Generate content using Gemini AI."""
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')  # Updated to a valid model
+        model = genai.GenerativeModel('gemini-2.0-flash	')  # Updated to a valid model
         response = model.generate_content(prompt_text)
         return response.text.strip()
     except Exception as e:
