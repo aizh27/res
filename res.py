@@ -13,11 +13,8 @@ import io
 load_dotenv()
 
 # Configure Gemini API
-API_KEY = "AIzaSyD7fSCEABwq3JezjAVh8ujVGYlps_iuXi4"
-if not API_KEY:
-    st.error("GEMINI_API_KEY not found in .env file. Please set it.")
-    st.stop()
-genai.configure(api_key=API_KEY)
+
+genai.configure(api_key="AIzaSyD7fSCEABwq3JezjAVh8ujVGYlps_iuXi4")
 
 # --- Helper Functions ---
 def generate_resume_content(prompt_text):
