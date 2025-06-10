@@ -13,12 +13,12 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     st.error("GEMINI_API_KEY not found in .env file. Please create one.")
     st.stop()
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=AIzaSyD7fSCEABwq3JezjAVh8ujVGYlps_iuXi4)
 
 # --- Helper function for Gemini AI generation ---
 def generate_resume_content(prompt_text):
     try:
-        model = genai.GenerativeModel('gemini-pro') # Using gemini-pro for text generation
+        model = genai.GenerativeModel('gemini-2.0-flash') # Using gemini-pro for text generation
         response = model.generate_content(prompt_text)
         return response.text
     except Exception as e:
