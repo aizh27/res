@@ -13,15 +13,10 @@ import tempfile
 # Set Streamlit page configuration first
 st.set_page_config(page_title="AI Resume Generator", page_icon="📝", layout="wide")
 
-# Load environment variables
-load_dotenv()
-api_key = os.getenv("GEMINI_API_KEY")
-if not api_key:
-    st.error("Gemini API key not found. Please set it in the .env file.")
-    st.stop()
+
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyCmoqnAdEuXy9mstE4RNwIVxDraRgtlxpU")
+genai.configure(api_key="AIzaSyCdcJwI2M7K285VuUZETCljpS1nVm745lA")
 
 # Initialize session state for resume data
 if "resume_data" not in st.session_state:
